@@ -6,6 +6,7 @@ export default function PostCard({ post }) {
   const body = post.body.length > 70 ? post.body.slice(0, 70) + '...' : post.body
 
   return (
+    <Link to={`/item/${post.id}`}>
     <div
       className="
         bg-[#1e1e1e] text-white rounded-lg overflow-hidden shadow-md
@@ -20,11 +21,12 @@ export default function PostCard({ post }) {
           {body}
           {post.body.length > 70 && (
             <span className="text-blue-400 ml-1">
-              <Link to={`/item/${post.id}`}>Read More...</Link>
+              Read More...
             </span>
           )}
         </p>
       </div>
     </div>
+    </Link>
   )
 }
