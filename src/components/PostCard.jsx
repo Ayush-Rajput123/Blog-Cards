@@ -9,8 +9,9 @@ export default function PostCard({ post }) {
     <Link to={`/item/${post.id}`}>
     <div
       className="
-        bg-[#1e1e1e] text-white rounded-lg overflow-hidden shadow-md
-        transform transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-2xl
+        block bg-[#1e1e1e] text-white rounded-lg overflow-hidden shadow-md
+        transform transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03]
+        hover:shadow-2xl cursor-pointer h-full
       "
     >
       <img src={post.imgSrc} alt={post.title} className="w-full h-40 object-cover" />
